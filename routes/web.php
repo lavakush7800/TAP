@@ -22,3 +22,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/employee',[App\Http\Controllers\Crud\EmployeeController::class, 'index']);
+Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store']);
