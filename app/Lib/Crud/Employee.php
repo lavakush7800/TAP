@@ -5,10 +5,10 @@ use App\Models\Employee as Model;
 use Illuminate\Support\Facades\Log;
 
 class Employee{
-    public static function store(){
+    public static function store($data){
         try{
-            $data = Model::create();
-            return $data;
+            $result = Model::create($data);
+            return $result;
         
         }catch(Exeption $e){
     
