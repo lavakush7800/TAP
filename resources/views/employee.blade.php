@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container card">
+    <center><h2><b>Emoloyee Register</b></h2></center>
 <form method="post" action="/save">
   <div class="form-group">
     <label for="image">image:</label>
