@@ -14,7 +14,12 @@ class CreateEmploeesTable extends Migration
     public function up()
     {
         Schema::create('emploees', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('image')->nullable();
+            $table->string('name');
+            $table->string('email',191)->unique();
+            $table->string('mobile')->nullable();
+            $table->string('address')->nullable();
             $table->timestamps();
         });
     }
