@@ -5,5 +5,11 @@ use App\Models\Employee as Model;
 use Illuminate\Support\Facades\Log;
 
 class Employee{
-
+    public static function store(){
+        try{
+        
+        }catch(Exeption $e){
+    
+        }
+    }
 }
