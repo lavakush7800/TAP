@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Log;
 class Employee{
     public static function store(){
         try{
+            $data = Model::create();
+            return $data;
         
         }catch(Exeption $e){
     
