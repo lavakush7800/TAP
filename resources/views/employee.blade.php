@@ -4,6 +4,7 @@
 <div class="container card">
     <center><h2><b>Emoloyee Register</b></h2></center>
 <form method="post" action="/save">
+@csrf
   <div class="form-group">
     <label for="image">image:</label>
     <input type="file" class="form-control" id="image" name="image">
