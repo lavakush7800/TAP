@@ -39,7 +39,7 @@ class EmployeeController extends Controller
         try{
             $data = $request->all();
             $result = Employee::store($data);
-            dd($result); 
+            return view('employee'); 
         }catch(Exception $e){
 
         }

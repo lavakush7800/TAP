@@ -5,13 +5,17 @@ use App\Models\Employee as Model;
 use Illuminate\Support\Facades\Log;
 
 class Employee{
-    public static function store($data){
+    public static function store(array $data):string{
         try{
+            // dd($data);
             $result = Model::create($data);
-            return $result;
-        
-        }catch(Exeption $e){
-    
+            if($result){
+                return $result->toArray();
+            }else{
+                return '';
+            }
+        }catch(\exception $e){
+            throw new \Exception('Unable to save data!');
         }
     }
 }
