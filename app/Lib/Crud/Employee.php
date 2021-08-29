@@ -10,7 +10,7 @@ class Employee{
             // dd($data);
             $result = Model::create($data);
             if($result){
-                return $result->toArray();
+                return $result;
             }else{
                 return '';
             }
