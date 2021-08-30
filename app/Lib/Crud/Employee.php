@@ -18,4 +18,11 @@ class Employee{
             throw new \Exception('Unable to save data!');
         }
     }
+    public static function getData(){
+        try{
+            
+        }catch(Exception $e){
+
+        }
+    }
 }
