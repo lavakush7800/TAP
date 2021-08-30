@@ -42,6 +42,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="employee">{{ __('employee') }}</a>
                                 </li>
+                                <li>
+                                <a class="nav-link" href="employeeShow">{{ __('employeeShow') }}</a>
+                                </li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
