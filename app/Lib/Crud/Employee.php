@@ -20,7 +20,8 @@ class Employee{
     }
     public static function getData(){
         try{
-            
+            $data = Model::all();
+            return view('employeeShow', ['data'=>$data]);
         }catch(Exception $e){
 
         }

@@ -53,7 +53,11 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        //
+        try{
+            
+        }catch(Exception $e){
+
+        }
     }
 
     /**
