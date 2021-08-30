@@ -18,12 +18,16 @@ class Employee{
             throw new \Exception('Unable to save data!');
         }
     }
-    public static function getData(){
+    public static function getData():array{
         try{
             $data = Model::all();
-            return view('employeeShow', ['data'=>$data]);
-        }catch(Exception $e){
-
+            if($data){
+                return $data->toArray();
+            }else{
+                return [];
+            }
+        }catch(\Exception $e){
+            Log::error($e);
         }
     }
 }
