@@ -13,6 +13,8 @@
         <th>EMAIL</th>
         <th>MOBILE</th>
         <th>ADDRESS</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +30,17 @@
         <td>{{ $data['email'] }}</td>
         <td>{{ $data['mobile'] }}</td>
         <td>{{ $data['address'] }}</td>
+        <td>
+        <form  action="">
+        @csrf
+        <button class="btn btn-dark btn-sm">Edit</button>
+        </form>
+        </td>
+        <td>
+        <a href="#">
+        <button class="btn btn-dark btn-sm ">Delete</button>
+        </a>
+        </td>
 
       </tr>
     @endforeach
