@@ -95,7 +95,7 @@ class EmployeeController extends Controller
     public function delete($id)
     {
         try{
-            $data = Registration::delete($id);
+            $data = Employee::delete($id);
             if($data){
                 return redirect('employeeShow');
             }else{
