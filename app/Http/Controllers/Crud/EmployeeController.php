@@ -42,7 +42,7 @@ class EmployeeController extends Controller
             // dd($fname);
             $data['image'] =$fname;
             $result = Employee::store($data);
-            return view('employeeShow'); 
+            return view('employee'); 
         }catch(Exception $e){
 
         }
