@@ -19,7 +19,7 @@
     @foreach($results as $data)
       <tr>
         <td>{{ $data['id'] }}</td>
-        <td><img src='<?php echo "/storage/".str_replace('public/','',$data['image']); ?>' width="80" /></td>
+        <td class="card" > <img src='<?php echo "/storage/".str_replace('public/','',$data['image']); ?>' style="border: 1px solid #ddd; border-radius: 6px; max-width: 350px; text-align: center;    " width="80" /></td>
         <td>{{ $data['name'] }}</td>
         <td>{{ $data['email'] }}</td>
         <td>{{ $data['mobile'] }}</td>
