@@ -38,6 +38,9 @@ class EmployeeController extends Controller
     {
         try{
             $data = $request->all();
+            $fname = $request->image->store('/public');
+            // dd($fname);
+            $data['image'] =$fname;
             $result = Employee::store($data);
             return view('employeeShow'); 
         }catch(Exception $e){
