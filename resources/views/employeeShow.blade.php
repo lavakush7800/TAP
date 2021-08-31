@@ -37,7 +37,7 @@
         </form>
         </td>
         <td>
-        <a href="#">
+        <a href="employee/delete/{{ $data['id'] }}">
         <button class="btn btn-dark btn-sm ">Delete</button>
         </a>
         </td>

@@ -30,4 +30,16 @@ class Employee{
             Log::error($e);
         }
     }
+    public static function delete(int $id):bool{
+        try{
+            $data = Model::find($id)->delete();
+            if($data){
+                return true;
+            }else{
+                return false;
+            }
+        }catch(\Exception $e){
+            throw new \Exception('Sumthing went Wrong');
+        }
+    }
 }
