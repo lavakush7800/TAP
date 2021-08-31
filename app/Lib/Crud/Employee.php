@@ -30,6 +30,13 @@ class Employee{
             Log::error($e);
         }
     }
+    public static function getById($id){
+        try{
+            
+        }catch(Exception $e){
+
+        }
+    }
     public static function delete(int $id):bool{
         try{
             $data = Model::find($id)->delete();
