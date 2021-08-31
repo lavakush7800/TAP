@@ -92,8 +92,17 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        try{
+            $data = Registration::delete($id);
+            if($data){
+                return redirect('employeeShow');
+            }else{
+                return redirect('employeeShow')->withError('Unable to delete');
+            }
+        }catch(\Exception $e){
+            return redirect('employeeShow')->withErrors('Data Not Found');
+        }
     }
 }
