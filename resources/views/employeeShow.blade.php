@@ -45,20 +45,7 @@
       </tr>
     @endforeach
     </tbody>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    
-    <td>
-        <a href="/employee">
-        <button class="btn btn-dark btn-md ">Add New Employee</button>
-        </a>
-        </td>
-        
   </table>
+        <a href="/employee"><button class="btn btn-dark btn-md btn pull-right">Add New Employee</button></a>
 </div>
 @endsection
