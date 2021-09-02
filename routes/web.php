@@ -19,20 +19,21 @@ Route::get('/', function () {
 });
 Route::get('/admin', function () {
     return view('admin');
-});
+})->middleware('checklogin');
 Route::get('/superAdmin', function () {
     return view('superAdmin');
-});
+})->middleware('checklogin');
+
 Route::get('/user', function () {
     return view('user');
-});
+})->middleware('checklogin');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('checklogin');
 
-Route::get('/employee',[App\Http\Controllers\Crud\EmployeeController::class, 'index']);
-Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store']);
-Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show']);
-Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete']);
+Route::get('/employee',[App\Http\Controllers\Crud\EmployeeController::class, 'index'])->middleware('checklogin');
+Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store'])->middleware('checklogin');
+Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show'])->middleware('checklogin');
+Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete'])->middleware('checklogin');
 

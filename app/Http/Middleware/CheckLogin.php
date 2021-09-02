@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use AUth;
 
 class CheckLogin
 {
@@ -22,7 +23,10 @@ class CheckLogin
                 return redirect('user'); 
            }
            else if ( $user->role=='admin' ) {
-                return $next($request);
+            return redirect('admin');
+           }
+           else if( $user->role=='superAdmin' ){
+            return $next($request);
            }
         }
         else{

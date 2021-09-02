@@ -16,7 +16,7 @@
                                     <option value="">Select Role</option>
                                     <option value="user">User</option>
                                     <option value="admin">Admin</option>
-                                    <option value="admin">Super Admin</option>
+                                    <option value="super_admin">Super Admin</option>
                                 </select>
                             </div>
 

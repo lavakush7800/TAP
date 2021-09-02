@@ -25,7 +25,10 @@ class UserAuthenticated
 
            // allow user to proceed with request
            else if ( $user->role=='admin' ) {
-                return $next($request);
+                return redirect('admin');
+           }
+           else if($user->role=='superAdmin' ){
+
            }
         }
 
