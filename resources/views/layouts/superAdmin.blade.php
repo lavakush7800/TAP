@@ -39,11 +39,8 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="employee">{{ __('employee') }}</a>
-                                </li>
-                                <li>
-                                <a class="nav-link" href="employeeShow">{{ __('employeeShow') }}</a>
+                        <li class="nav-item">
+                                    <a class="nav-link" href="superAdmin">{{ __('superAdmin') }}</a>
                                 </li>
                         @guest
                             @if (Route::has('login'))
