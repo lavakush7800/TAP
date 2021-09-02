@@ -8,22 +8,37 @@
   <div class="form-group">
     <label for="image">image:</label>
     <input type="file" class="form-control" id="image" name="image">
+    @error('image')
+       <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
   </div>
   <div class="form-group">
     <label for="name">Name:</label>
     <input type="text" class="form-control" id="name" name="name">
+    @error('name')
+       <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
   </div>
   <div class="form-group">
     <label for="email">Email address:</label>
     <input type="email" class="form-control" id="email" name="email">
+    @error('email')
+       <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
   </div>
   <div class="form-group">
     <label for="mobile">Mobile:</label>
     <input type="number" class="form-control" id="mobile" name="mobile">
+    @error('mobile')
+       <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
   </div>
   <div class="form-group">
     <label for="address">Address:</label>
     <input type="text" class="form-control" id="address" name="address">
+    @error('address')
+       <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
   </div>
   <div class="checkbox">
     <label><input type="checkbox"> Remember me</label>

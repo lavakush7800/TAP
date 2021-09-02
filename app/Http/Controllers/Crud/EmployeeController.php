@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Crud;
 use App\Lib\Crud\Employee;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\EmployeeStore;
 
 class EmployeeController extends Controller
 {
@@ -34,7 +35,7 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmployeeStore $request)
     {
         try{
             $data = $request->all();

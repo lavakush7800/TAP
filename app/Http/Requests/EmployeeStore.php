@@ -13,7 +13,7 @@ class EmployeeStore extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class EmployeeStore extends FormRequest
     public function rules()
     {
         return [
-            //
+            'image' => 'required',
+            'name' => 'required',
+            'email' => 'required',
+            'mobile' => 'required',
+            'address' => 'required',
         ];
     }
 }
