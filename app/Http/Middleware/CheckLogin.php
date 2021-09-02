@@ -16,6 +16,18 @@ class CheckLogin
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        if(Auth::check()){
+            $user = Auth::user();
+            if ( $user->role=='user' ) {
+                return redirect('user'); 
+           }
+           else if ( $user->role=='admin' ) {
+                return $next($request);
+           }
+        }
+        else{
+            return redirect('login');
+        }
+        echo "this is checklog middleware";  
     }
 }
