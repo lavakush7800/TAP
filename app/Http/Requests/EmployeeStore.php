@@ -31,4 +31,13 @@ class EmployeeStore extends FormRequest
             'address' => 'required',
         ];
     }
+    public function messages(){
+        return[
+            'image.required' => 'Image is required',
+            'name.required' => 'Name is required',
+            'email.required' => 'Email is required',
+            'mobile.required' => 'Mobile is required',
+            'address.required' => 'Address is required',
+        ];
+    }
 }
