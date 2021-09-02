@@ -17,6 +17,15 @@ use App\Http\Controllers\EmployeeController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin', function () {
+    return view('admin');
+});
+Route::get('/superAdmin', function () {
+    return view('superAdmin');
+});
+Route::get('/user', function () {
+    return view('user');
+});
 
 Auth::routes();
 
