@@ -37,4 +37,4 @@ Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store
 Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show'])->middleware('checklogin');
 Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete'])->middleware('checklogin');
 
-Route::get('video',[App\Http\Controllers\Crud\VideoController::class, 'index'])
+Route::get('video',[App\Http\Controllers\Crud\VideoController::class, 'index']);
