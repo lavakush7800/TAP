@@ -16,7 +16,7 @@ use App\Http\Controllers\EmployeeController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('checklogin');
 
 
 Auth::routes();
@@ -28,4 +28,5 @@ Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store
 Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show']);
 Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete']);
 
-Route::get('video',[App\Http\Controllers\Crud\VideoController::class, 'index']);
+Route::get('user',[App\Http\Controllers\Crud\UserController::class, 'index'])->middleware('checklogin');
+Route::get('admin',[App\Http\Controllers\Crud\AdminController::class, 'index'])->middleware('checklogin');
