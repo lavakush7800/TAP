@@ -30,3 +30,5 @@ Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController
 
 Route::get('user',[App\Http\Controllers\Crud\UserController::class, 'index'])->middleware('checklogin');
 Route::get('admin',[App\Http\Controllers\Crud\AdminController::class, 'index'])->middleware('checklogin');
+
+Route::get('/front',[App\Http\Controllers\Crud\FrontController::class, 'index']);
