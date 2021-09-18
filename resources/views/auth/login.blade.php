@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header"><center><h3><b>{{ __('Login') }}</b></h3></center></div>
                 <div class="card-body bg-primary">
-                    <div class="card" style="margin-top:-20px; margin-left:-20px; margin-right:-20px;">
+                    <div class="card" style="margin-top:-20px; margin-left:-20px; margin-right:-20px; margin-bottom:-20px;">
                         <form method="POST" action="{{ route('login') }}"> 
                             @csrf
 
