@@ -22,6 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/admin',[App\Http\Controllers\Crud\AdminController::class, 'index'])->middleware('checklogin');
 
 Route::get('/employee',[App\Http\Controllers\Crud\EmployeeController::class, 'index']);
 Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store']);
@@ -31,4 +32,3 @@ Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController
 Route::get('user',[App\Http\Controllers\Crud\UserController::class, 'index'])->middleware('checklogin');
 Route::get('admin',[App\Http\Controllers\Crud\AdminController::class, 'index'])->middleware('checklogin');
 
-Route::get('/front',[App\Http\Controllers\Crud\FrontController::class, 'index']);
