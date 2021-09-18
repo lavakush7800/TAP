@@ -11,8 +11,4 @@ class AdminController extends Controller
         return view('admin');
     }
 
-    public function store(Request $request){
-        dd($request)
-
-    }
 }
