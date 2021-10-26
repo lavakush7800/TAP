@@ -9,7 +9,7 @@ class SuperAdmin{
         try{
 
         }catch(\Exception $e){
-            
+            throw new \Exception('Unable to save data!');
         }
     }
 }
