@@ -10,11 +10,11 @@ class SuperAdminController extends Controller
     public function index(){
         return view('superAdmin');
     }
-    public function store(){
+    public function store(Request $request){
         try{
 
         }catch(\Exception $e){
-            
+
         }
     }
 }
