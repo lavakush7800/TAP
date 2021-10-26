@@ -5,5 +5,7 @@ use App\Models\SuperAdmin as Model;
 use Illuminate\Support\Facades\Log;
 
 class SuperAdmin{
-    
+    public static function store(){
+        
+    }
 }
