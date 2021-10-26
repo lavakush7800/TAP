@@ -6,6 +6,10 @@ use Illuminate\Support\Facades\Log;
 
 class SuperAdmin{
     public static function store(){
-        
+        try{
+
+        }catch(\Exception $e){
+            
+        }
     }
 }
