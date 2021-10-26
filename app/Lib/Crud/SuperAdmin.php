@@ -7,7 +7,12 @@ use Illuminate\Support\Facades\Log;
 class SuperAdmin{
     public static function store(){
         try{
-
+            $result = Model::create($data);
+            if($result){
+                return $result;
+            }else{
+                return '';
+            }
         }catch(\Exception $e){
             throw new \Exception('Unable to save data!');
         }
