@@ -22,5 +22,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
-Route::get('admin',[App\Http\Controllers\Crud\AdminController::class, 'index'])->middleware('checklogin');
-
