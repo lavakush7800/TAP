@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class ColorController extends Controller
 {
-    //
+    public function index(){
+        
+    }
 }
