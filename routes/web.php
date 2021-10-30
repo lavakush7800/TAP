@@ -23,7 +23,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 
-Route::get('/employee',[App\Http\Controllers\Crud\EmployeeController::class, 'index']);
+
 Route::post('/save',[App\Http\Controllers\Crud\EmployeeController::class, 'store']);
 Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show']);
 Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete']);
