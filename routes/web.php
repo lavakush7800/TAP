@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index']);
 
 
 
-Route::get('/employeeShow',[App\Http\Controllers\Crud\EmployeeController::class, 'show']);
+
 Route::get('/employee/delete/{id}',[App\Http\Controllers\Crud\EmployeeController::class, 'delete']);
 
 Route::get('user',[App\Http\Controllers\Crud\UserController::class, 'index'])->middleware('checklogin');
