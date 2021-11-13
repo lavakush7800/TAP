@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/category/all',[CategoryController::class,'AllCat'])->name('all.category');
 Route::POST('/category/add',[CategoryController::class,'AddCat'])->name('store.category');
 Route::get('/category/edit/{id}',[CategoryController::class,'Edit']);
-Route::POST('/category/update/{id}',[CategoryController::class,'Update']);
+Route::POST('/brand/update/{id}',[CategoryController::class,'Update']);
 Route::get('/softdelete/category/{id}',[CategoryController::class,'SoftDelete']);
 Route::get('/category/restore/{id}',[CategoryController::class,'Restore']);
 Route::get('/pdelete/category/{id}',[CategoryController::class,'Pdelete']);
@@ -34,6 +34,13 @@ Route::get('/pdelete/category/{id}',[CategoryController::class,'Pdelete']);
 Route::get('/brand/all',[BrandController::class,'AllBrand'])->name('all.brand');
 Route::POST('/brand/add',[BrandController::class,'StoreBrand'])->name('store.brand');
 Route::get('/brand/edit/{id}',[BrandController::class,'Edit']);
+Route::POST('/brand/update/{id}',[BrandController::class,'Update']);
+Route::get('/brand/delete/{id}',[BrandController::class,'Delete']);
+
+
+////Multi Image Route
+Route::get('/multi/image',[BrandController::class,'Multipic'])->name('multi.image');
+Route::POST('/multi/add',[BrandController::class,'StoreImg'])->name('store.image');
 
 
 

@@ -12,7 +12,7 @@
                     <div class="card">
                         <div class="card-header">Edit Brand</div>
                         <div class="card-body">
-                            <form action="{{ url('brand/update/'.$brands->id) }}" method="POST">
+                            <form action="{{ url('brand/update/'.$brands->id) }}" method="POST" enctype='multipart/form-data'>
                                 <div class="form-group">
                                     <label for="brand_name">Update Brand Name</label>
                                     <input type="text" class="form-control" name="brand_name" id="brand_name" value="{{ $brands->brand_name }}">
@@ -23,6 +23,7 @@
                                 <div class="form-group">
                                     <label for="brand_image">Update Brand image</label>
                                     <input type="file" class="form-control" name="brand_image" id="brand_image" value="{{ $brands->brand_image }}">
+                                    <input type="hidden" class="form-control" name="old_image" value="{{ $brands->brand_image }}">
                                     @error('brand_image')
                                     <span class="text-danger">{{ $message }}</span>
                                     @enderror
