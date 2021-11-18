@@ -104,7 +104,7 @@ class BrandController extends Controller
 
         foreach($image as $multi_img){
             $name_gen = hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
-            Image::make($multi_img)->resize(300,300)->save('image/multi/'.$name_gen);
+            Image::make($multi_img)->resize(100,100)->save('image/multi/'.$name_gen);
             $last_img = 'image/multi/'.$name_gen;
             Multipic::insert([
                 'image' => $last_img,
