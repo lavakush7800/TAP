@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 
@@ -17,9 +19,22 @@ use App\Http\Controllers\BrandController;
 |
 */
 
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function () {
+    echo "This is Home Page";
+});
+
+Route::get('/about',[AboutController::class,'index']);
+
+Route::get('/contact',[ContactController::class,'index']);
 
 ///Category Route
 Route::get('/category/all',[CategoryController::class,'AllCat'])->name('all.category');

@@ -10,6 +10,9 @@ use Image;
 
 class BrandController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
     public function AllBrand(){
         $brands = Brand::latest()->paginate(5);
         return view('admin.brand.index', compact('brands'));
@@ -104,7 +107,7 @@ class BrandController extends Controller
 
         foreach($image as $multi_img){
             $name_gen = hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
-            Image::make($multi_img)->resize(100,100)->save('image/multi/'.$name_gen);
+            Image::make($multi_img)->resize(300,300)->save('image/multi/'.$name_gen);
             $last_img = 'image/multi/'.$name_gen;
             Multipic::insert([
                 'image' => $last_img,
